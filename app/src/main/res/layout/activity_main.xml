@@ -39,6 +39,31 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="40dp"
-        android:id="@+id/tvOrderItem"/>
+        android:id="@+id/tvOrderItem"
+        android:textSize="20sp"
+        android:textColor="#EBF4511E"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:textSize="20sp"
+            android:text="Total: "
+            android:textStyle="bold"
+            android:textColor="#EBF4511E"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:id="@+id/tvBillTotal"
+            android:textSize="20sp"
+            android:textColor="#EBF4511E"/>
+    </LinearLayout>
+
 
 </androidx.appcompat.widget.LinearLayoutCompat>

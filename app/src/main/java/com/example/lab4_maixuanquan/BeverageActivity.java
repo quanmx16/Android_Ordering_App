@@ -58,4 +58,17 @@ public class BeverageActivity extends AppCompatActivity {
         }
         tvTotal.setText(total + "đ");
     }
+    public void decreaseProduct(int position) {
+        Booking booking = Booking.getInstance();
+        ArrayList<ProductItem> beverageItems = booking.getBeverageItems();
+        int currentCount = beverageItems.get(position).getCount();
+        beverageItems.get(position).setCount((currentCount - 1) >= 0 ? (currentCount - 1) : 0);
+        productItemAdapter.notifyDataSetChanged();
+        int total = 0;
+        int size = beverageItems.size();
+        for (int i = 0; i < size; i++) {
+            total += beverageItems.get(i).getCount() * beverageItems.get(i).getPrice();
+        }
+        tvTotal.setText(total + "đ");
+    }
 }

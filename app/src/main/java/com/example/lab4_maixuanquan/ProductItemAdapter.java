@@ -47,9 +47,10 @@ public class ProductItemAdapter extends BaseAdapter {
         TextView productPrice = convertView.findViewById(R.id.tvProductPrice);
         EditText count = convertView.findViewById(R.id.edtProductCount);
         Button btnPlus = convertView.findViewById(R.id.btnPlus);
+        Button btnMinus = convertView.findViewById(R.id.btnMinus);
         productImage.setImageResource(productItems.get(position).getImage());
         productName.setText(productItems.get(position).getName());
-        productPrice.setText(productItems.get(position).getPrice()+ "đ");
+        productPrice.setText(productItems.get(position).getPrice() + "đ");
         count.setText(Integer.toString((productItems.get(position).getCount())));
         btnPlus.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,14 +58,28 @@ public class ProductItemAdapter extends BaseAdapter {
                 increaseProduct(position);
             }
         });
+        btnMinus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                decreaseProduct(position);
+            }
+        });
         return convertView;
     }
-    private void increaseProduct(int position){
-        if(context instanceof FoodActivity){
-            ((FoodActivity)context).increaseProduct(position);
+
+    private void increaseProduct(int position) {
+        if (context instanceof FoodActivity) {
+            ((FoodActivity) context).increaseProduct(position);
+        } else if (context instanceof BeverageActivity) {
+            ((BeverageActivity) context).increaseProduct(position);
         }
-        else if(context instanceof BeverageActivity){
-            ((BeverageActivity)context).increaseProduct(position);
+    }
+
+    private void decreaseProduct(int position) {
+        if (context instanceof FoodActivity) {
+            ((FoodActivity) context).decreaseProduct(position);
+        } else if (context instanceof BeverageActivity) {
+            ((BeverageActivity) context).decreaseProduct(position);
         }
     }
 }

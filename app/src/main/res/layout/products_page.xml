@@ -2,17 +2,19 @@
 <androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical" android:layout_margin="5dp">
 
     <Button
         android:id="@+id/btnExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Exit" />
+        android:layout_marginTop="20dp"
+        android:text="Done" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
         android:orientation="horizontal">
 
         <TextView
@@ -28,14 +30,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#FB8C00"
-            android:textSize="20sp"
-           />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <ListView
         android:id="@+id/lvProducts"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="8dp"
+        />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
