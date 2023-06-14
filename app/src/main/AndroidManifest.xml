@@ -13,13 +13,31 @@
         android:theme="@style/Theme.Lab4_MaiXuanQuan"
         tools:targetApi="31">
         <activity
+            android:name=".task2.PassingBundle"
+            android:exported="false" />
+        <activity
+            android:name=".task2.PassingObject"
+            android:exported="false" />
+        <activity
+            android:name=".task2.PassingArray"
+            android:exported="false" />
+        <activity
+            android:name=".task2.PassingInteger"
+            android:exported="false" />
+        <activity
+            android:name=".task2.PassingString"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
             android:name=".BeverageActivity"
             android:exported="false" />
         <activity
             android:name=".FoodActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".task2.MainPassing"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -8,6 +8,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.lab4_maixuanquan.task2.MainPassing;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnExit;
     private TextView orderItem;
     private TextView billTotal;
+    private FloatingActionButton btnChange;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,14 @@ public class MainActivity extends AppCompatActivity {
         btnExit = findViewById(R.id.btnExit);
         orderItem = findViewById(R.id.tvOrderItem);
         billTotal = findViewById(R.id.tvBillTotal);
+        btnChange = findViewById(R.id.btnChange);
+        btnChange.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainPassing.class);
+                startActivity(intent);
+            }
+        });
         btnExit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
